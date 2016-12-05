@@ -16,22 +16,7 @@ var GDSNPricingChargeName = process.env.GDSNPricingChargeName;
 
 
 
-/*
-var headerZuora = {
-    "apiAccessKeyId": "apiuser@1worldsync.com",
-    "apiSecretAccessKey": "Zuora000",
-    "Accept": "application/json",
-    "Content-Type" : "application/json"
-};
 
-var ACHPageid = "2c92c0f8576a2dc5015772ef64c5631c";
-var CreditPageID = "2c92c0f95753fa8e0157585f417917ae";
-var ZuoraHostedPage = "https://apisandbox.zuora.com/apps/PublicHostedPageLite.do";
-var pricelimit = 2000;
-var ExcludeGDSNpricing = true;
-var GDSNPricingChargeName = "GDSN Pricing";
-
-*/
 var format = require('date-format');
 
 /*****************Create new subscription using Soap********/
