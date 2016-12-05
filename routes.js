@@ -1,19 +1,37 @@
 var appRouter = function(app) {
 
 var headerZuora = {
-    "apiAccessKeyId": process.env.apiAccessKeyId, //"apiuser@1worldsync.com",
-    "apiSecretAccessKey": process.env.apiSecretAccessKey, //"Zuora000",
+    "apiAccessKeyId": process.env.apiAccessKeyId, 
+    "apiSecretAccessKey": process.env.apiSecretAccessKey, 
     "Accept": "application/json",
     "Content-Type" : "application/json"
 };
 
-var ACHPageid = process.env.ACHPageid; //"2c92c0f8576a2dc5015772ef64c5631c";
-var CreditPageID = process.env.CreditPageID; //"2c92c0f95753fa8e0157585f417917ae";
-var ZuoraHostedPage = process.env.ZuoraHostedPage; //"https://apisandbox.zuora.com/apps/PublicHostedPageLite.do";
-var pricelimit = process.env.pricelimit; //2000;
-var ExcludeGDSNpricing = process.env.ExcludeGDSNpricing; //true;
-var GDSNPricingChargeName = process.env.GDSNPricingChargeName; //"GDSN Pricing";
+var ACHPageid = process.env.ACHPageid; 
+var CreditPageID = process.env.CreditPageID; 
+var ZuoraHostedPage = process.env.ZuoraHostedPage; 
+var pricelimit = process.env.pricelimit; 
+var ExcludeGDSNpricing = process.env.ExcludeGDSNpricing; 
+var GDSNPricingChargeName = process.env.GDSNPricingChargeName; 
 
+
+
+/*
+var headerZuora = {
+    "apiAccessKeyId": "apiuser@1worldsync.com",
+    "apiSecretAccessKey": "Zuora000",
+    "Accept": "application/json",
+    "Content-Type" : "application/json"
+};
+
+var ACHPageid = "2c92c0f8576a2dc5015772ef64c5631c";
+var CreditPageID = "2c92c0f95753fa8e0157585f417917ae";
+var ZuoraHostedPage = "https://apisandbox.zuora.com/apps/PublicHostedPageLite.do";
+var pricelimit = 2000;
+var ExcludeGDSNpricing = true;
+var GDSNPricingChargeName = "GDSN Pricing";
+
+*/
 var format = require('date-format');
 
 /*****************Create new subscription using Soap********/
@@ -1092,8 +1110,7 @@ app.post("/preview", function(req, res) {
    
    var url='https://apisandbox-api.zuora.com/rest/v1/subscriptions/preview';
 
-   
-/*
+  /* 
    var jsonBody = JSON.stringify({
   "termType": "EVERGREEN",
  "contractEffectiveDate": "2016-10-31",
@@ -1108,14 +1125,21 @@ app.post("/preview", function(req, res) {
      "billCycleDay": 0},
   "subscribeToRatePlans":
     [{"chargeOverrides":
-       [{"productRatePlanChargeId": "2c92c0f95789a68601578c2defe91f5d"}],
-      "productRatePlanId": "2c92c0f95789a68601578c2defd31f5b"}],
+       [{"productRatePlanChargeId": "2c92c0f9578d5b3c015796f1f5592e69"}],
+      "productRatePlanId": "2c92c0f9578d5b3c015796f1f5482e67"}, 
+
+        {"chargeOverrides":
+       [{"productRatePlanChargeId": "2c92c0f9587b0ace01588b97ad480f90", "quantity" : 1000}],
+      "productRatePlanId": "2c92c0f9587b0aca01588b960e510f47"
+
+
+      }], 
   
   "initialTermPeriodType": "Year"
 }
 );
-*/
 
+*/
 
 
 
@@ -1140,6 +1164,7 @@ app.post("/preview", function(req, res) {
  "initialTermPeriodType": "Year"
 }
 ); 
+
 
 
 var options = {
