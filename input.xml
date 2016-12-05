@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fns="http://fault.api.zuora.com/" xmlns:ons="http://object.api.zuora.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zns="http://api.zuora.com/">
+   <soap:Header>
+      <SessionHeader>
+         <session>DsUXVzB7Je3m7B-d5hW-Z6Q2i0rBBXOho5IMWOP5eXA2fRsdInoH9GRWFh314lDWfHhSNqf3tPF6qhK11HHfZwQxP0vhbfhNrG3CderTAxqxC_wMIiXuzc93p95TaC8XDILwOXIjG6iisy1dJV1Qx-fwXEBkFNLVlu3bx7xQsMoMkH5-hs2bBi14bohvH-p7Vi_Mh9DyeBfGDh61azqgTlrY1ID0-mg8Zndo1nmGX9YvfoP5A2tgqgKI1gMDfZ2QD3Lx4ibeS2f4eOFCW3XE_6KHGktH81K919G8q4_B8USiPL0lvtbkrtg6azM392eeX33VHDs-xb9ClyK6YV6nhnl2va8WQiQrHp2M4PwWJCI=</session>
+      </SessionHeader>
+   </soap:Header>
+   <soap:Body>
+      <zns:subscribe xmlns="http://api.zuora.com/">
+         <zns:subscribes>
+            <zns:Account>
+               <ons:BillCycleDay>0</ons:BillCycleDay>
+               <ons:AutoPay>false</ons:AutoPay>
+               <ons:Currency>USD</ons:Currency>
+               <ons:Name>testAccountName1</ons:Name>
+               <ons:BcdSettingOption>AutoSet</ons:BcdSettingOption>
+               <ons:Batch>Batch1</ons:Batch>
+               <ons:PaymentTerm>Due Upon Receipt</ons:PaymentTerm>
+            </zns:Account>
+            <zns:PaymentMethod>
+               <ons:Type>Credit Card</ons:Type>
+               <ons:id>2c92c0f958aa455e0158c07d91767ade</ons:id>
+            </zns:PaymentMethod>
+            <zns:BillToContact>
+               <ons:Address1>1051 E Hillsdale Blvd</ons:Address1>
+               <ons:City>Foster City</ons:City>
+               <ons:Country>United States</ons:Country>
+               <ons:FirstName>John</ons:FirstName>
+               <ons:LastName>Smith</ons:LastName>
+               <ons:ZipCode>94404</ons:ZipCode>
+               <ons:State>CA</ons:State>
+            </zns:BillToContact>
+            <zns:SubscriptionData>
+               <zns:Subscription>
+                  <ons:InitialTerm>12</ons:InitialTerm>
+                  <ons:RenewalTerm>12</ons:RenewalTerm>
+                  <ons:TermStartDate>2016-12-02</ons:TermStartDate>
+                  <ons:TermType>TERMED</ons:TermType>
+                  <ons:contractEffectiveDate>2016-12-02</ons:contractEffectiveDate>
+               </zns:Subscription>
+               <zns:RatePlanData>
+                  <zns:RatePlan>
+                     <ons:ProductRatePlanId>2c92c0f95789a68601578c2defd31f5b</ons:ProductRatePlanId>
+                  </zns:RatePlan>
+                  <zns:RatePlanChargeData>
+                     <zns:RatePlanCharge>
+                        <ons:ProductRatePlanChargeId>2c92c0f95789a68601578c2defe91f5d</ons:ProductRatePlanChargeId>
+                        <ons:quantity>1</ons:quantity>
+                     </zns:RatePlanCharge>
+                  </zns:RatePlanChargeData>
+               </zns:RatePlanData>
+               <zns:RatePlanData>
+                  <zns:RatePlan>
+                     <ons:ProductRatePlanId>2c92c0f957220b8c015729b5fb2026d8</ons:ProductRatePlanId>
+                  </zns:RatePlan>
+                  <zns:RatePlanChargeData>
+                     <zns:RatePlanCharge>
+                        <ons:ProductRatePlanChargeId>2c92c0f85721ff7c015729bf53032103</ons:ProductRatePlanChargeId>
+                        <ons:quantity>1</ons:quantity>
+                     </zns:RatePlanCharge>
+                  </zns:RatePlanChargeData>
+               </zns:RatePlanData>
+            </zns:SubscriptionData>
+         </zns:subscribes>
+      </zns:subscribe>
+   </soap:Body>
+</soap:Envelope>
